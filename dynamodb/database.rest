@@ -1,0 +1,28 @@
+# Get all tables from database
+GET http://127.0.0.1:3000/listtables HTTP/1.1
+
+###
+
+# Create table named: Cars
+POST http://127.0.0.1:3000/createtable/Computers HTTP/1.1
+
+###
+
+# Load Car into table Cars
+POST http://127.0.0.1:3000/loadcar HTTP/1.1
+content-type: application/json
+
+{
+    "id": 5,
+    "type": "Automatic",
+    "name": "Bentley",
+    "manufacturer": "Toyota",
+    "fuel_type": "Petrol",
+    "description": "A smooth ride"
+}
+
+###
+
+# Get car by ID
+
+GET http://127.0.0.1:3000/readcar/5 HTTP/1.1
